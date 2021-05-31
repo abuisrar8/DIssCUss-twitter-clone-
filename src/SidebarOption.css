@@ -1,14 +1,15 @@
 .sidebarOption{
     display:flex;
     align-items: center;
-    cursor: pointer;
-    width:fit-content;
-    padding: 0 10px;
+    cursor: pointer;    
+    padding-left: 10px;
+    width: fit-content;
 }
 
-.sidebarOption:hover{
+.sidebarInner:hover  > .sidebarOption {
     background-color: #e8f5fe;
     border-radius: 30px;
+    
     color: var(--twitter-color);
     transition: color 100ms ease-out;
 }
