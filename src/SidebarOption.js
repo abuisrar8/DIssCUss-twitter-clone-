@@ -3,10 +3,11 @@ import './SidebarOption.css';
 import './Sidebar.js'
 
 
-function SidebarOption() {
+function SidebarOption({active,Icon, text}) {
     return (
-        <div className="sidebarOption">
-            <h2>Home</h2>
+        <div className={`sidebarOption ${active && 'SidebarOption--active'}`}>
+            <Icon/>
+            <h2>{text}</h2>
             
         </div>
     )
