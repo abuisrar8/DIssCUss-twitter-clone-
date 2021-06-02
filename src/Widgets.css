@@ -1,3 +1,15 @@
 .widgets{
     flex: .3;
 }
+.widget_search{
+    display: flex;
+    margin: 5px 5px;
+}
+.widget_searchBox{
+    padding: 0 10px ;
+    border-radius: 20px;
+    color: darkgray;
+    font-size: 13px;
+    outline: none;
+    
+}

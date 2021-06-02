@@ -22,7 +22,7 @@
     border: none;
     background-color: var(--twitter-background);
     border-radius: 30px;
-    padding: 0 5px;
+    padding: 0 10px;
     outline: none;
   }
 
@@ -42,4 +42,7 @@ Button{
 .tweetBox__imageInput {
     border: none;
     padding:10px ;
+    background-color: inherit;
+    color: whitesmoke;
+    font-weight: 700;
 }
