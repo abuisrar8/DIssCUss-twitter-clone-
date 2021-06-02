@@ -3,17 +3,19 @@
     display: flex;
     align-items: flex-start;
     border-bottom: 1px solid var(--twitter-background);
-    border-top: 1px solid var(--twitter-background);
     padding-bottom: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    padding-right: 10px;
 }
-.post_body{
+.post__body{
     flex:1;
     padding: 10px;
+    
 }
 
 .post__body > img {
     border-radius: 20px;
+    width:auto !important;
 }
 
 
@@ -28,10 +30,11 @@
     color: grey;
 }
 .post__headerDescription {
+  margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 15px;
-    color: rgb(68, 68, 68) ;
-    font-weight: lighter;
+    font-size: 20px;
+    color: rgb(187, 184, 184) ;
+    font-weight: 700;
     
   }
   .post__headerText > h3 {
@@ -39,7 +42,8 @@
     margin-bottom: 5px;
   }
   .post__avatar {
-    padding: 10px 20px;
+    padding: 10px;
+    padding: right 20px ;
   }
 
   .post__footer{

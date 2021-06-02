@@ -1,55 +1,50 @@
-import { Avatar } from '@material-ui/core';
-import React from 'react'
-import './Post.css';
-import DP from './DP_disscuss.png' ;
+
+import React, { forwardRef } from "react";
+import "./Post.css";
+import { Avatar } from "@material-ui/core";
 import StarsIcon from '@material-ui/icons/Stars';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import RepeatIcon from '@material-ui/icons/Repeat';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import PublishIcon from '@material-ui/icons/Publish';
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import RepeatIcon from "@material-ui/icons/Repeat";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import PublishIcon from "@material-ui/icons/Publish";
 
-
-
-function Post({
-    displayName,
-userName,
-verified,
-text,
-image,
-avatar}) {
+const Post = forwardRef(
+  ({ displayName, userName, verified, text, image, avatar }, ref) => {
     return (
-        <div className="post">
-            <div className ="post__avatar">
-                <Avatar src= {DP}/>
-            </div>
-            <div className="post__body">
-                <div className="post__header">
-                    <div className="post_headerText">
-                        <h3>
-                            Izrar Khan{" "}
-                            <span className="post__headerSpecial">
-                                <StarsIcon className="post__badge" fontSize="small"/>@izrarknan
-                            </span>
-                        </h3>
-
-                    </div>
-                    <div className="post__headerDescription">
-                        <p>!oh YES .. I m building a Twitter Clone...</p>
-                    </div>
-                </div>
-                <img src='https://media4.giphy.com/media/39sZJ5lu2ScnwGTJRK/giphy.gif?cid=ecf05e47z7p85rgg453qg595aoi5xrp4cl2j516icxx4xxlm&rid=giphy.gif&ct=g' alt="opps !!"/>
-                <div className="post__footer">
-                    <ChatBubbleOutlineIcon fontSize="small" />
-                    <RepeatIcon fontSize="small" />
-                    <FavoriteBorderIcon fontSize="small" />
-                    <PublishIcon fontSize="small" />
-                </div>
-            </div>
-            
-
-
+      <div className="post" ref={ref}>
+        <div className="post__avatar">
+          <Avatar src={avatar} />
         </div>
-    )
-}
+        <div className="post__body">
+          <div className="post__header">
+            <div className="post__headerText">
+              <h3>
+                {displayName}{" "}
+                <span className="post__headerSpecial">
+                  {verified && <StarsIcon className="post__badge" />} @
+                  {userName}
+                </span>
+              </h3>
+            </div>
+            <div className="post__headerDescription">
+              <p>{text}</p>
+            </div>
+          </div>
+          <img src={image} alt="" />
+          <div className="post__footer">
+            <ChatBubbleOutlineIcon fontSize="small" />
+            <RepeatIcon fontSize="small" />
+            <FavoriteBorderIcon fontSize="small" />
+            <PublishIcon fontSize="small" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+);
 
-export default Post
+export default Post;
+
+
+
+ 
